@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "type": "Highscore",
+        "name": "123"
+    },
+    {
+        "id": "2",
+        "type": "Highscore",
+        "name": "1234"
+    },
+    {
+        "id": "3",
+        "type": "Highscore",
+        "name": "12345"
+    }
+]
