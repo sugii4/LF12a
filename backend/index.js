@@ -1,26 +1,21 @@
-const express = require('express');
-const path = require('path');
-const adminRoute = require('./routes/admin');
+var http = require('http');
 
-const app = express();
+const app = http();
 
-//EJS template engine setup
+//Server mit XAMPP
+http.createServer(function (req, res){
+    res.write('Nodejs started using xampp');
+    res.end();
+}).listen(80);
+console.log('http server started');
+
+//Static Files
+app.use(http.static('public'));
+app.use('/css', http.static(__dirname + 'public/css'));
+app.use('/js', http.static(__dirname + 'public/js'));
+
+//Templating Engine
+app.set('pages', './src/pages');
 app.set('view engine', 'ejs');
-app.set('views', './src/pages');
 
-//Setting up the directory on the Server for CSS, JavaScript and media files
-app.use('/static', express.static(path.join(__dirname + '/public')));
-
-//Configuring the Server to work with form submissions and json files
-app.use(express.urlencoded({
-    extended: false }));
-app.use(express.json());
-
-//Connecting all the routes
-app.use('/', adminRoute);
-
-const port = process.env.PORT ||
-5000;
-
-app.listen(port, () =>
-console.log('Server running on port ${5000}, http://localhost:${5000}'));
+//Routes
