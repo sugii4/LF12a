@@ -10,17 +10,40 @@
 <body>
     <div id="content">
         <p id="überschrift">Scythe Calculator</p>
-        <Span id="actual-content">
-            <p class="text">Sterne:</p>
-            <p class="text">Münzen:</p>
-            <p class="text">Territorien:</p>
-            <p class="text">:</p>
-            <p class="text">Sterne:</p>
-            <p class="text">Sterne:</p>
-            <p class="text">Sterne:</p>
-            <p class="text">Sterne:</p>
-        </Span>
-    <input type="button" value="Weiter" id="weiter"">
+        <div id="actual-content">
+            <p class="text">Sterne:<br>
+                <input class="input"><br>
+            </p>
+            <p class="text">Münzen:<br>
+                <input class="input">
+            </p>
+            <p class="text">Popularität:<br>
+                <select class="input">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+            </p>
+            <p class="text">Territorien:<br>
+                <input class="input">
+            </p>
+            <p class="text">Ressourcen:<br>
+                <input class="input">
+            </p>
+            <p class="text">Bonus:<br>
+                <input class="input">
+            </p>
+            <p class="text">Fabrik:<br>
+                <select class="input">
+                    <option value="true">Ja</option>
+                    <option value="false">Nein</option>
+                  </select>
+            </p>
+            <p class="text">Gesamt:<br>
+                <input class="input">
+            </p>
+        </div>
+    <input type="button" value="Berechnen" id="berechnen"">
     </div>
 </body>
 </html>
