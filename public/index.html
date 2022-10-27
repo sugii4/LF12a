@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <title>Scythe Calculator</title>
-    <script src="function.js"></script>
+    <script src="app.js" async defer></script> <!--"async defer": warte bis die Seite fertig geladen hat und lade dann erst die JS-->
 </head>
 <body>
     <div id="content">
         <p id="überschrift">Scythe Calculator</p>
         <div id="actual-content">
             <p class="text">Sterne:<br>
-                <input class="input"><br>
+                <input id="sterne" class="input"><br>
             </p>
             <p class="text">Münzen:<br>
-                <input class="input">
+                <input id="muenzen" class="input">
             </p>
             <p class="text">Popularität:<br>
-                <select class="input">
+                <select id="popularitaet" class="input">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
             </p>
             <p class="text">Territorien:<br>
-                <input class="input">
+                <input id="territorien" class="input">
             </p>
             <p class="text">Ressourcen:<br>
-                <input class="input">
+                <input id="ressourcen" class="input">
             </p>
             <p class="text">Bonus:<br>
-                <input class="input">
+                <input id="bonus" class="input">
             </p>
             <p class="text">Fabrik:<br>
-                <select class="input">
+                <select id="fabrik" class="input">
                     <option value="true">Ja</option>
                     <option value="false">Nein</option>
-                  </select>
+                </select>
             </p>
             <p class="text">Gesamt:<br>
-                <input class="input">
+                <input id="gesamt" class="input" disabled>
             </p>
         </div>
     <input type="button" value="Berechnen" id="berechnen"">
