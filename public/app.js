@@ -14,11 +14,11 @@ button.addEventListener('click', function(event) { //erst wenn der Button geklic
     // if () //hier felder validieren
     
     let muenzen = input_muenzen.value
-    let popularitaet = parseInt(input_popularitaet.value)
+    let popularitaet = input_popularitaet.value
     let ressourcen = input_ressourcen.value
     let territorien = input_territorien.value
     let fabrik = input_fabrik.value
-    let sterne = parseInt(input_sterne.value)
+    let sterne = input_sterne.value
     let bonus = input_bonus.value
     let gesamt = input_gesamt.value
 
