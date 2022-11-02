@@ -11,10 +11,10 @@
         <p id="überschrift">Scythe Calculator</p>
         <Span id="actual-content">
             <div class="text">Münzen<br>
-                <input type="text" id="muenzen" class="input">
+                <input type="number" id="muenzen" class="input">
             </div>
             <div class="text">Popularität<br>
-                <select id="popularitaet" name="tier" class="input">
+                <select id="popularitaet" name="tier" class="input" type="number">
                     <option value="blank"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -22,34 +22,34 @@
                 </select>
             </div>
             <div class="text">Ressourcen<br>
-                <input type="text" id="ressourcen" class="input">
+                <input type="number" id="ressourcen" class="input">
             </div>
             <div class="text">Territorien<br>
-                <input type="text" id="territorien" class="input">
+                <input type="number" id="territorien" class="input">
             </div>
             <div class="text">Fabrik?<br>
-                <select id="fabrik" name="fabrik" class="input">
+                <select id="fabrik" name="fabrik" class="input" type="number">
                     <option value="blank"></option>
-                    <option value="ja">Ja</option>
-                    <option value="nein">Nein</option>
+                    <option [ngValue]="true">Ja</option>
+                    <option [ngValue]="false">Nein</option>
                 </select>
             </div>
             <div class="text">Sterne<br>
-                <select id="sterne" name="stern" class="input">
+                <select id="sterne" name="stern" class="input" type="number">
                     <option value="blank"></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-                    <option value="6">6</option>
+                    <option value="6">6</option>s
                 </select>
             </div>
             <div class="text">Bonus<br>
-                <input type="text" id="bonus" class="input">
+                <input type="number" id="bonus" class="input">
             </div>
             <div class="text">Gesamt<br>
-                <input type="text" id="gesamt" class="input" disabled>
+                <input type="number" id="gesamt" class="input" disabled>
             </div>
         </Span>
         <input type="button" value="Berechnen" id="berechnen">
