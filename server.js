@@ -21,6 +21,7 @@ app.post('/scoreboard',(req,res)=>{ //wenn ich localhost/scoreboard in die URL d
   connection.query(`INSERT INTO scorelist (Sterne, Muenzen, Popularitaet, Territorien, Ressourcen, Bonus, Fabrik, Gesamt) VALUES (${body.sterne},${body.muenzen}, ${body.popularitaet}, ${body.territorien}, ${body.ressourcen}, ${body.bonus}, ${body.fabrik}, ${body.gesamt})`,function(error, results, fields) {
     if (error) {
       res.json({success:false,message:error.toString()})
+      console.log("errorrr")
     } else {
       res.json({success:true})
     }
