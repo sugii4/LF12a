@@ -1,15 +1,29 @@
 let button = document.getElementById('berechnen')
-let input_sterne = document.getElementById('sterne')
 let input_muenzen = document.getElementById('muenzen')
+let input_popularitaet = document.getElementById('popularitaet')
+let input_ressourcen = document.getElementById('ressourcen')
+let input_territorien = document.getElementById('territorien')
+let input_fabrik = document.getElementById('fabrik')
+let input_sterne = document.getElementById('sterne')
+let input_bonus = document.getElementById('bonus')
+let input_gesamt = document.getElementById('gesamt')
+
 
 button.addEventListener('click', function(event) { //erst wenn der Button geklickt wurde, führe den Code in den Klammern aus
     
     // if () //hier felder validieren
     
-    let sterne = input_sterne.value
     let muenzen = input_muenzen.value
+    let popularitaet = input_popularitaet.value
+    let ressourcen = input_ressourcen.value
+    let territorien = input_territorien.value
+    let fabrik = input_fabrik.value
+    let sterne = input_sterne.value
+    let bonus = input_bonus.value
+    let gesamt = input_gesamt.value
+
     console.log('button wurde geklickt')
-    const data = `sterne=${sterne}&muenzen=${muenzen}&popularitaet=test&territorien=1&ressourcen=4&bonus=1&fabrik=0&gesamt=4`
+    const data = `sterne=${sterne}&muenzen=${muenzen}&popularitaet=${popularitaet}&territorien=${territorien}&ressourcen=${ressourcen}&bonus=${bonus}&fabrik=${fabrik}&gesamt=${gesamt}`
     post('/scoreboard', data) //übergebe an localhost/scoreboard?
 })
 
