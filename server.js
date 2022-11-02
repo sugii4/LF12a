@@ -10,6 +10,7 @@ const connection = mysql.createConnection({ //verbinde dich mit der Datenbank,
   password : '',
   database : 'scoreboard'
 });
+console.log("database connected")
 
 app.use(express.static('./public')) //führt alles im Ordner "public" auf "localhost" aus
 app.use(bodyParser.urlencoded({extended: true}));

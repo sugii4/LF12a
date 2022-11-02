@@ -22,6 +22,12 @@ button.addEventListener('click', function(event) { //erst wenn der Button geklic
     let bonus = input_bonus.value
     let gesamt = input_gesamt.value
 
+    if (fabrik === 'true') {
+        fabrik = 1
+    } else {
+        fabrik = 0
+    }
+
     console.log('button wurde geklickt')
     const data = `sterne=${sterne}&muenzen=${muenzen}&popularitaet=${popularitaet}&territorien=${territorien}&ressourcen=${ressourcen}&bonus=${bonus}&fabrik=${fabrik}&gesamt=${gesamt}`
     post('/scoreboard', data) //übergebe an localhost/scoreboard?
