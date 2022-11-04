@@ -7,7 +7,4 @@ Wenn ich die Dateien dann auch pushen usw. will
 --> git config --global user.name "sugii"
 --> git config --global user.email cindy.hinze2001@gmail.com
 
-folgende Installationen für dieses Projekt sind nötig:
-Node.js,
-XAMPPs
-s
+folgende Installationen für dieses Projekt sind nötig: XAMPP

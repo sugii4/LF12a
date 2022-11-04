@@ -28,11 +28,11 @@ app.post('/scoreboard',(req,res)=>{ //wenn ich localhost/scoreboard in die URL d
   })
 })
 
-app.get('/scoreboard', (req, res) => { //wenn ich localhost/scoreboard in die URL des Browsers eingebe, 
-  connection.query("SELECT * FROM scorelist order by id desc limit 1;", function (error, results, fields) {//speicher die Daten dort ein und 
+app.get('/scoreboard', (req, res) => { //holt Daten
+  connection.query("SELECT * FROM scorelist", function (error, results, fields) {
     res.json(results[0])
-  });
-})
+  })
+})  
 
 //mysql heartbeat
 setInterval(function () {
