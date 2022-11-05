@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="utf-8">
@@ -10,40 +9,37 @@
 <body>
     <div id="content">
         <p id="überschrift">Scythe Calculator</p>
-        <div id="actual-content">
-            <p class="text">Sterne:<br>
-                <input id="sterne" class="input"><br>
-            </p>
-            <p class="text">Münzen:<br>
-                <input id="muenzen" class="input">
-            </p>
-            <p class="text">Popularität:<br>
-                <select id="popularitaet" class="input">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                  </select>
-            </p>
-            <p class="text">Territorien:<br>
-                <input id="territorien" class="input">
-            </p>
-            <p class="text">Ressourcen:<br>
-                <input id="ressourcen" class="input">
-            </p>
-            <p class="text">Bonus:<br>
-                <input id="bonus" class="input">
-            </p>
-            <p class="text">Fabrik:<br>
-                <select id="fabrik" class="input">
+        <Span id="actual-content">
+            <div class="text">Münzen<br>
+                <input type="number" id="muenzen" class="input">
+            </div>
+            <div class="text">Popularität (Tier)<br>
+                <input type="number" id="popularitaet" class="input">
+            </div>
+            <div class="text">Ressourcen<br>
+                <input type="number" id="ressourcen" class="input">
+            </div>
+            <div class="text">Territorien<br>
+                <input type="number" id="territorien" class="input">
+            </div>
+            <div class="text">Fabrik?<br>
+                <select id="fabrik" name="fabrik" class="input">
+                    <option value="blank"></option>
                     <option value="true">Ja</option>
                     <option value="false">Nein</option>
                 </select>
-            </p>
-            <p class="text">Gesamt:<br>
-                <input id="gesamt" class="input" disabled>
-            </p>
-        </div>
-    <input type="button" value="Berechnen" id="berechnen"">
+            </div>
+            <div class="text">Sterne<br>
+                <input type="number" id="sterne" class="input">
+            </div>
+            <div class="text">Bonus<br>
+                <input type="number" id="bonus" class="input">
+            </div>
+            <div class="text">Gesamt<br>
+                <input type="number" id="gesamt" class="input" disabled>
+            </div>
+        </Span>
+        <input type="button" value="Berechnen" id="berechnen">
     </div>
 </body>
 </html>
