@@ -1,62 +1,49 @@
 <html lang="de">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
+    <script src="./public/app.js" async defer></script>
     <title>Scythe Calculator</title>
 </head>
+
 <body>
     <div id="content">
         <p id="überschrift">Scythe Calculator</p>
-        <Span id="actual-content">
-            <div class="text">Münzen<br>
-                <form method="post" action="communicator.php">
+        <span id="actual-content">
+            <form method="post" action="scoreboard.php" id="eingaben">
+                <div class="text">Münzen<br>
                     <input type="number" id="muenzen" class="input" name="muenzen" placeholder="Münzen">
-                </form>
-            </div>
-            <div class="text">Popularität<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Popularität<br>
                     <input type="number" id="popularitaet" class="input" name="popularitaet" placeholder="Tier">
-                </form>
-            </div>
-            <div class="text">Ressourcen<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Ressourcen<br>
                     <input type="number" id="ressourcen" class="input" name="ressourcen" placeholder="Ressourcen">
-                </form>
-            </div>
-            <div class="text">Territorien<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Territorien<br>
                     <input type="number" id="territorien" class="input" name="territorien" placeholder="Territorien">
-                </form>
-            </div>
-            <div class="text">Fabrik?<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Fabrik?<br>
                     <select id="fabrik" name="fabrik" class="input" placeholder="Fabrik?">
                         <option value="blank"></option>
-                        <option value="1">Ja</option>
-                        <option value="0">Nein</option>
+                        <option value="true">Ja</option>
+                        <option value="false">Nein</option>
                     </select>
-                </form>
-            </div>
-            <div class="text">Sterne<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Sterne<br>
                     <input type="number" id="sterne" class="input" name="sterne" placeholder="Sterne">
-                </form>
-            </div>
-            <div class="text">Bonus<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Bonus<br>
                     <input type="number" id="bonus" class="input" name="bonus" placeholder="Bonus">
-                </form>
-            </div>
-            <div class="text">Gesamt<br>
-                <form method="post" action="communicator.php">
+                </div>
+                <div class="text">Gesamt<br>
                     <input type="number" id="gesamt" class="input" disabled name="gesamt" placeholder="Ergebnis">
-                </form>
-            </div>
-        </Span>
-        <form method="post" action="communicator.php">
-            <input type="submit" value="berechnen" id="berechnen">
-        </form>
+                </div>
+                <button id="berechnen">berechnen</button>
+            </form>
+        </span>
     </div>
 </body>
 </html>
