@@ -20,7 +20,7 @@ body {
     margin-bottom: 5%;
 }
 
-#actual-content { /*Inhalt*/
+#eingaben { /*Inhalt*/
     width: 90%;
     height: 50%;
     margin: auto;
@@ -34,14 +34,15 @@ body {
 }
 
 #berechnen { /*berechnen button*/
-    width: 15%;
-    height: 5.5%;
-    font-size: 1.5em;
+    width: 80%;
+    height: 50%;
+    font-size: 1.8em;
     font-family: Papyrus;
     background-color: #bca89f;
     border-color: #64473b;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     line-height: 1.5em;
+    place-self: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -51,12 +52,11 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1280px) { /*Desktops*/
-    #actual-content {
+    #eingaben {
         grid-template-columns: 24.5% 24.5% 24.5% 24.5%; /*teilt grid in 4 spalten*/
     }
 
     #berechnen {
-        float: right;
         margin-right: 10%;
         margin-top: 3%;
     }
