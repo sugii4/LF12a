@@ -9,13 +9,13 @@
 <?php
         include('connector.php');
 
-        $muenzen = $_GET['muenzen'];
-        $popularitaet = $_GET['popularitaet'];
-        $ressourcen = $_GET['ressourcen'];
-        $territorien = $_GET['territorien'];
-        $fabrik = $_GET['fabrik'];
-        $sterne = $_GET['sterne'];
-        $bonus = $_GET['bonus'];
+        $muenzen = $_POST['muenzen'];
+        $popularitaet = $_POST['popularitaet'];
+        $ressourcen = $_POST['ressourcen'];
+        $territorien = $_POST['territorien'];
+        $fabrik = $_POST['fabrik'];
+        $sterne = $_POST['sterne'];
+        $bonus = $_POST['bonus'];
         
 
         $insert_daten = "INSERT INTO scorelist (Muenzen, Popularitaet, Ressourcen, Territorien, Fabrik, Sterne, Bonus) VALUES ('$muenzen', '$popularitaet', '$ressourcen', '$territorien', '$fabrik', '$sterne', '$bonus')";
