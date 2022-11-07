@@ -1,12 +1,13 @@
-//let button = document.getElementById('berechnen')
-//let input_muenzen = document.getElementById('muenzen')
-//let input_popularitaet = document.getElementById('popularitaet')
-//let input_ressourcen = document.getElementById('ressourcen')
-//let input_territorien = document.getElementById('territorien')
+let button = document.getElementById('berechnen')
+let input_muenzen = document.getElementById('muenzen')
+let input_popularitaet = document.getElementById('popularitaet')
+let input_ressourcen = document.getElementById('ressourcen')
+let input_territorien = document.getElementById('territorien')
 let input_fabrik = document.getElementById('fabrik')
-//let input_sterne = document.getElementById('sterne')
-//let input_bonus = document.getElementById('bonus')
+let input_sterne = document.getElementById('sterne')
+let input_bonus = document.getElementById('bonus')
 let input_gesamt = document.getElementById('gesamt')
+
 let output_muenzen = document.getElementById('highscore_muenzen')
 let output_ressourcen = document.getElementById('highscore_ressourcen')
 let output_territorien = document.getElementById('highscore_territorien')
@@ -42,16 +43,18 @@ form.addEventListener('submit', function (event) {
 
     let gesamtSterne = sternePunkte + popularitaet -1 * sterne
     let gesamtTerritorien = territorienPunkte + popularitaet -1 * territorien
-    let gesamtRessourcen = ressourcenPunkte + popularitaet -1 * Ressourcen/2
+    let gesamtRessourcen = ressourcenPunkte + popularitaet -1 * ressourcen/2
 
     if(fabrik == 1) {
-        fabrik += 30
+        fabrik += regionen * 3
     } else {
         fabrik += 0
     }
 
-    let Rechnung = gesamtSterne + gesamtTerritorien + gesamtRessourcen + muenzen + bonus + fabrik
-    gesamt = Rechnung
+    let rechnung = gesamtSterne + gesamtTerritorien + gesamtRessourcen + muenzen + bonus + fabrik
+   
+    gesamt = rechnung
+     input_gesamt.value = gesamt
 
 console.log(gesamt)
 
@@ -82,7 +85,7 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
 }).then(function (response) { //kann die abgefragten daten nun nutzen und anzeigen
     console.log(response);
     let ergebnis = response.data
-    output_muenzen = ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
+    output_muenzen += ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
 })
 
 //todo: in index.html elemente bauen wo der highscore angezeigt wird
