@@ -11,8 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //abfarge für post-methode
     $fabrik = $_POST['fabrik'];
     $sterne = $_POST['sterne'];
     $bonus = $_POST['bonus'];
+    $gesamt = $_POST['gesamt'];
     
-    $insert_daten = "INSERT INTO scorelist (Muenzen, Popularitaet, Ressourcen, Territorien, Fabrik, Sterne, Bonus) VALUES ('{$muenzen}', '{$popularitaet}', '{$ressourcen}', '{$territorien}', '{$fabrik}', '{$sterne}', '{$bonus}')";
+    $insert_daten = "INSERT INTO scorelist (Muenzen, Popularitaet, Ressourcen, Territorien, Fabrik, Sterne, Bonus, Gesamt) VALUES ('{$muenzen}', '{$popularitaet}', '{$ressourcen}', '{$territorien}', '{$fabrik}', '{$sterne}', '{$bonus}', '{$gesamt}')";
     
     if (@mysqli_query($conn, $insert_daten)) { //fehleranalyse fürs einspeichern der daten
         $response = ['success' => true];
@@ -21,12 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //abfarge für post-methode
     }
     echo json_encode($response);
 } else if ($_SERVER['REQUEST_METHOD'] === 'GET') { //abfrage für get-methode
-    $select_daten = "SELECT * FROM scorelist where id = 1"; //todo: richtige query bauen
+    $select_daten = "SELECT MAX(Muenzen), MAX(Ressourcen), MAX(Territorien), MAX(Bonus), MAX(Gesamt) FROM scorelist;"; //todo: richtige query bauen
     $result = @mysqli_query($conn, $select_daten);
     if (mysqli_error($conn)) { //fehleranalyse bei der connection
         $response = ['success' => false, 'message' => mysqli_error($conn)]; //wenn connection fehlgeschlagen, hau fehlermeldung raus
     } else { //ansonsten...
-        $data = mysqli_fetch_all($result,MYSQLI_ASSOC)[0]; //...nimm alle abgefragten daten, aber nur die erste zeile
+        $data = mysqli_fetch_all($result,MYSQLI_ASSOC); //...nimm alle abgefragten daten, aber nur die erste zeile
         $response = ['success' => true,'data'=>$data]; // und speicher die abgefragten daten in "data"
     }
     echo json_encode($response); //zeigs mir für mich leserlich

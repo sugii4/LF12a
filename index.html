@@ -4,26 +4,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="style.css">
-    <script src="./public/app.js" async defer></script>
+    <script src="app.js" async defer></script>
     <title>Scythe Calculator</title>
 </head>
 
 <body>
     <div id="content">
         <p id="überschrift">Scythe Calculator</p>
-        <!--<span id="actual-content"> -->
             <form method="post" action="scoreboard.php" id="eingaben">
                 <div class="text">Münzen<br>
                     <input type="number" id="muenzen" class="input" name="muenzen" placeholder="Münzen">
+                    <output id="highscore_nuenzen" class="highscore"></output>
                 </div>
                 <div class="text">Popularität<br>
                     <input type="number" id="popularitaet" class="input" name="popularitaet" placeholder="Tier">
                 </div>
                 <div class="text">Ressourcen<br>
                     <input type="number" id="ressourcen" class="input" name="ressourcen" placeholder="Ressourcen">
+                    <output id="highscore_ressourcen" class="highscore"></output>
                 </div>
                 <div class="text">Territorien<br>
                     <input type="number" id="territorien" class="input" name="territorien" placeholder="Territorien">
+                    <output id="highscore_territorien" class="highscore"></output>
                 </div>
                 <div class="text">Fabrik?<br>
                     <select id="fabrik" name="fabrik" class="input" placeholder="Fabrik?">
@@ -37,13 +39,14 @@
                 </div>
                 <div class="text">Bonus<br>
                     <input type="number" id="bonus" class="input" name="bonus" placeholder="Bonus">
+                    <output id="highscore_bonus" class="highscore"></output>
                 </div>
                 <div class="text">Gesamt<br>
-                    <input type="number" id="gesamt" class="input" disabled name="gesamt" placeholder="Ergebnis">
+                    <input type="number" id="gesamt" class="input" name="gesamt" placeholder="Ergebnis" disabled>
+                    <output id="highscore_gesamt" class="highscore"></output>
                 </div>
                 <button id="berechnen">berechnen</button>
             </form>
-        <!--</span>-->
     </div>
 </body>
 </html>
