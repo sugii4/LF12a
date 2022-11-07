@@ -53,7 +53,7 @@ form.addEventListener('submit', function (event) {
     let rechnung = gesamtSterne + gesamtTerritorien + gesamtRessourcen + muenzen + bonus + fabrik
    
     if (fabrik == 'true') {
-        gesamt + (territorien*3)
+        gesamt = gesamt + (gesamtTerritorien*3)
     }
 
     console.log("fabrik punkte:" + fabrik)
