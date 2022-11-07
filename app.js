@@ -29,7 +29,6 @@ form.addEventListener('submit', function (event) {
     let fabrik = input_fabrik.value
     let sterne = parseInt(input_sterne.value)
     let bonus = parseInt(input_bonus.value)
-    let gesamt = parseInt(input_gesamt.value)
 
     let sternePunkte = 3
     let territorienPunkte = 2
@@ -41,12 +40,24 @@ form.addEventListener('submit', function (event) {
         fabrik = 0
     }
 
-    let gesamtSterne = sternePunkte + popularitaet -1 * sterne
-    let gesamtTerritorien = territorienPunkte + popularitaet -1 * territorien
-    let gesamtRessourcen = ressourcenPunkte + popularitaet -1 * ressourcen/2
+    let gesamtSterne = (sternePunkte + popularitaet -1) * sterne
+    let gesamtTerritorien = (territorienPunkte + popularitaet -1) * territorien
+    let gesamtRessourcen = (ressourcenPunkte + popularitaet -1) * (ressourcen/2)
+
+    
+
+    console.log("gesamt Sterne:" + gesamtSterne)
+    console.log("gesamt Ressourcen:" + gesamtRessourcen)
+    console.log("gesamt Territorien:" + gesamtTerritorien)
 
     let rechnung = gesamtSterne + gesamtTerritorien + gesamtRessourcen + muenzen + bonus + fabrik
    
+    if (fabrik == 'true') {
+        gesamt + (territorien*3)
+    }
+
+    console.log("fabrik punkte:" + fabrik)
+
     gesamt = rechnung
     input_gesamt.value = gesamt
 
