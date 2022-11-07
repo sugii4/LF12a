@@ -87,7 +87,7 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
 }).then(function (response) { //kann die abgefragten daten nun nutzen und anzeigen
     console.log(response);
     let ergebnis = response.data
-    output_muenzen += ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
+    output_muenzen = ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
 })
 
 //todo: in index.html elemente bauen wo der highscore angezeigt wird
