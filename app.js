@@ -22,14 +22,16 @@ form.addEventListener('submit', function (event) {
 
     let data = new FormData(form) //speichert die eingegebenen Daten der inputs
 
-    let muenzen = input_muenzen.value
-    let popularitaet = input_popularitaet.value
-    let ressourcen = input_ressourcen.value
-    let territorien = input_territorien.value
+    let muenzen = parseInt(input_muenzen.value)
+    let popularitaet = parseInt(input_popularitaet.value)
+    let ressourcen = parseInt(input_ressourcen.value)
+    let territorien = parseInt(input_territorien.value)
     let fabrik = input_fabrik.value
-    let sterne = input_sterne.value
-    let bonus = input_bonus.value
-    let gesamt = input_gesamt.value
+    let sterne = parseInt(input_sterne.value)
+    let bonus = parseInt(input_bonus.value)
+    let gesamt = parseInt(input_gesamt.value)
+
+    console.log(typeof muenzen, typeof popularitaet, typeof ressourcen)
 
     let sternePunkte = 3
     let territorienPunkte = 2
