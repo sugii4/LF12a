@@ -89,5 +89,3 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
     output_muenzen.innerHTML = "Highscore:" + ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
     console.log(ergebnis.Muenzen)
 })
-
-//todo: in index.html elemente bauen wo der highscore angezeigt wird
