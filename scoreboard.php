@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //abfarge für post-methode
     if (mysqli_error($conn)) { //fehleranalyse bei der connection
         $response = ['success' => false, 'message' => mysqli_error($conn)]; //wenn connection fehlgeschlagen, hau fehlermeldung raus
     } else { //ansonsten...
-        $data = mysqli_fetch_all($result,MYSQLI_ASSOC); //...nimm alle abgefragten daten, aber nur die erste zeile
-        $response = ['success' => true,'data'=>$data]; // und speicher die abgefragten daten in "data"
+        $data = mysqli_fetch_all($result,MYSQLI_ASSOC)[0]; //...nimm alle abgefragten daten
+        $response = ['success' => true,'highscore'=>$data]; // und speicher die abgefragten daten in "highscore"
     }
     echo json_encode($response); //zeigs mir für mich leserlich
 }

@@ -1,4 +1,4 @@
-let button = document.getElementById('berechnen')
+//let button = document.getElementById('berechnen')
 let input_muenzen = document.getElementById('muenzen')
 let input_popularitaet = document.getElementById('popularitaet')
 let input_ressourcen = document.getElementById('ressourcen')
@@ -76,7 +76,6 @@ console.log(gesamt)
     })
 })
 
-
 fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scoreboard.php
     method: 'GET'
 }).then(function (response) { //muss so
@@ -86,8 +85,9 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
     return Promise.reject(response);
 }).then(function (response) { //kann die abgefragten daten nun nutzen und anzeigen
     console.log(response);
-    let ergebnis = response.data
-    output_muenzen = ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
+    let ergebnis = response.highscore
+    output_muenzen.innerHTML = ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
+    console.log(ergebnis.Muenzen)
 })
 
 //todo: in index.html elemente bauen wo der highscore angezeigt wird
