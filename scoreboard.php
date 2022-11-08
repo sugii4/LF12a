@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { //abfarge für post-methode
     }
     echo json_encode($response);
 } else if ($_SERVER['REQUEST_METHOD'] === 'GET') { //abfrage für get-methode
-    $select_daten = "SELECT MAX(Muenzen), MAX(Ressourcen), MAX(Territorien), MAX(Bonus), MAX(Gesamt) FROM scorelist;";
+    $select_daten = "SELECT MAX(Muenzen) AS Muenzen, MAX(Ressourcen) AS Ressourcen, MAX(Territorien) AS Territorien, MAX(Bonus) AS Bonus, MAX(Gesamt) AS Gesamt FROM scorelist;";
     $result = @mysqli_query($conn, $select_daten);
     if (mysqli_error($conn)) { //fehleranalyse bei der connection
         $response = ['success' => false, 'message' => mysqli_error($conn)]; //wenn connection fehlgeschlagen, hau fehlermeldung raus

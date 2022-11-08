@@ -85,7 +85,11 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
     return Promise.reject(response);
 }).then(function (response) { //kann die abgefragten daten nun nutzen und anzeigen
     console.log(response);
-    let ergebnis = response.highscore
-    output_muenzen.innerHTML = "Highscore:" + ergebnis.Muenzen //hier kannst du mit den werten aus der datenbank arbeiten
+    let ergebnis = response.highscore //hier kannst du mit den werten aus der datenbank arbeiten
+    output_muenzen.innerHTML = "Highscore:" + ergebnis.Muenzen
+    output_ressourcen.innerHTML = "Highscore:" + ergebnis.Ressourcen
+    output_territorien.innerHTML = "Highscore:" + ergebnis.Territorien
+    output_bonus.innerHTML = "Highscore:" + ergebnis.Bonus
+    output_gesamt.innerHTML = "Highscore:" + ergebnis.Gesamt
     console.log(ergebnis.Muenzen)
 })
