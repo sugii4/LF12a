@@ -1,0 +1,184 @@
+body {
+    background-image: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: Papyrus;
+}
+
+#content { /*heller Kasten*/
+    margin: auto;
+    background-color: rgb(252, 248, 244);
+    border-radius: 15px 15px 15px 15px;
+}
+
+#überschrift { /*Überschrift*/
+    text-align: center;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.highscore {
+    margin: 0;
+    width: 100%;
+    font-size: 0.6em!important;
+}
+
+.text { /*grid Kästchen */
+    text-align: center;
+    margin: 0;
+}
+
+#eingaben { /*Inhalt*/
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 0.3em;
+    justify-content: center;
+}
+
+.input { /* input felder*/
+    width: 60%;
+    font-family: Papyrus;
+    text-align: center;
+    background-color: #ccbdb6;
+    border-color: #4c3228;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+#berechnen { /*berechnen button*/
+    width: 80%;
+    font-family: Papyrus;
+    background-color: #bca89f;
+    border-color: #64473b;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    place-self: center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+/*
+@media (min-width: 1280px) { /*Desktops */ /*
+    #eingaben {
+        height: 50%;
+        grid-template-columns: repeat(4, 24.5%); /*teilt grid in 4 spalten*/ /*
+    }
+
+    .input {
+        font-size: 1em;
+    }
+
+    #überschrift {
+        font-size: 4em;
+    }
+
+    .text {
+        font-size: 2em;
+    }
+
+    #berechnen {
+        font-size: 1.8em;
+        margin-right: 10%;
+        margin-top: 3%;
+        grid-row-start: 3;
+        grid-column-start: 4;
+    }
+
+    #content { /*heller Kasten*/ /*
+        width: 55%;
+        height: 100%;
+    }
+}
+@media (min-width: 701px) and (max-width: 1279px){ /*Desktops*/ /*
+    #eingaben {
+        height: 50%;
+        grid-template-columns: repeat(4, 24.5%); /*teilt grid in 4 spalten*/ /*
+    }
+
+    .input {
+        font-size: 1em;
+    }
+
+    #überschrift {
+        font-size: 4em;
+    }
+
+    .text {
+        font-size: 2em;
+    }
+
+    #berechnen {
+        font-size: 1.8em;
+        margin-right: 10%;
+        margin-top: 3%;
+        grid-row-start: 3;
+        grid-column-start: 4;
+    }
+
+    #content { /*heller Kasten*/ /*
+        height: 100%;
+    }
+    
+}
+
+@media (min-width: 501px) and (max-width: 700px){ /*Tablets*/ /*
+    #überschrift {
+        font-size: 2.5em;
+    }
+    #eingaben {
+        height: 93%;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(3, 20%);
+    }
+    body {
+        background-image: none;
+        background-color: #69544c;
+    }
+    .text {
+        font-size: 1.8em;
+    }
+    #berechnen {
+        place-self: end center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 500px) { /*schmalere Smartphones*/ /*
+    body {
+        background-image: none;
+        background-color: #69544c;
+    }
+
+    #eingaben {
+        height: 90%;
+        grid-template-columns: 50% 50%;
+    }
+
+    #überschrift {
+        font-size: 2em;
+    }
+
+    #content { /*heller Kasten*/ /*
+        width: 100%;
+    }
+
+    .text {
+        font-size: 1.6em;
+    }
+
+    .input {
+        margin-top: 1%;
+        font-size: 0.8em;
+        height: 40%;
+        width: 80%;
+    }
+
+    #berechnen {
+        grid-row-start: 5;
+        grid-column-start: 2;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 1.5em;
+    }
+} */

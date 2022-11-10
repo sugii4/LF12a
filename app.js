@@ -36,7 +36,7 @@ form.addEventListener('submit', function (event) {
 
     let gesamtSterne = (sternePunkte + popularitaet -1) * sterne
     let gesamtTerritorien;
-    let gesamtRessourcen = (ressourcenPunkte + popularitaet -1) * (ressourcen/2)
+    let gesamtRessourcen = parseInt((ressourcenPunkte + popularitaet -1) * (ressourcen/2))
     let gesamt;
 
     if(fabrik === 'true') {
@@ -86,10 +86,10 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
 }).then(function (response) { //kann die abgefragten daten nun nutzen und anzeigen
     console.log(response);
     let ergebnis = response.highscore //hier kannst du mit den werten aus der datenbank arbeiten
-    output_muenzen.innerHTML = "Highscore:" + ergebnis.Muenzen
-    output_ressourcen.innerHTML = "Highscore:" + ergebnis.Ressourcen
-    output_territorien.innerHTML = "Highscore:" + ergebnis.Territorien
-    output_bonus.innerHTML = "Highscore:" + ergebnis.Bonus
-    output_gesamt.innerHTML = "Highscore:" + ergebnis.Gesamt
-    console.log(ergebnis.Muenzen)
+    output_muenzen.innerHTML = "Highscore: " + (ergebnis.Muenzen != null ? ergebnis.Muenzen : 0)
+    output_ressourcen.innerHTML = "Highscore: " + (ergebnis.Ressourcen != null ? ergebnis.Ressourcen : 0)
+    output_territorien.innerHTML = "Highscore: " + (ergebnis.Territorien != null ? ergebnis.Territorien : 0)
+    output_bonus.innerHTML = "Highscore: " + (ergebnis.Bonus != null ? ergebnis.Bonus : 0)
+    output_gesamt.innerHTML = "Highscore: " + (ergebnis.Gesamt != null ? ergebnis.Gesamt : 0)
+    //console.log(ergebnis.Muenzen != null)
 })
