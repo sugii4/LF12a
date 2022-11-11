@@ -91,5 +91,4 @@ fetch('scoreboard.php', { //übernimmt die Get Methode und nutzt dafür die scor
     output_territorien.innerHTML = "Highscore: " + (ergebnis.Territorien != null ? ergebnis.Territorien : 0)
     output_bonus.innerHTML = "Highscore: " + (ergebnis.Bonus != null ? ergebnis.Bonus : 0)
     output_gesamt.innerHTML = "Highscore: " + (ergebnis.Gesamt != null ? ergebnis.Gesamt : 0)
-    //console.log(ergebnis.Muenzen != null)
 })
