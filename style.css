@@ -2,6 +2,8 @@ body {
     background-color: #775b4f;
     background-size: 100%;
     font-family: Papyrus;
+    height: 100%;
+    width: 100%;
 }
 
 #content { /*heller Kasten*/
@@ -9,7 +11,7 @@ body {
     background-color: rgb(252, 248, 244);
     border-radius: 15px 15px 15px 15px;
     width: clamp(10vw, 95em, 95vw);
-    height: 100%;
+    /* height: 100%; */
 }
 
 #überschrift { /*Überschrift*/
@@ -37,6 +39,7 @@ body {
     display: grid;
     gap: 0.3em;
     justify-content: center;
+    height: 100%;
 }
 
 .input { /* input felder*/
@@ -77,7 +80,7 @@ input::-webkit-inner-spin-button {
 }
 @media (min-width: 1280px) { /*Desktops */
     #eingaben {
-        height: 50%;
+        height: 100%;
         grid-template-columns: repeat(4, 24.5%);
     }
 }
