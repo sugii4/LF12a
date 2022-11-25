@@ -2,6 +2,9 @@ body, html {
     font-family: Papyrus;
     height: 100%;
     overflow: hidden;
+    background-image: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #content { /*heller Kasten*/
@@ -59,12 +62,6 @@ input::-webkit-inner-spin-button {
 }
 
 @media (min-width: 1024px) { /*Desktops */ 
-    body {
-        background-image: url(wallpaper.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-
     .highscore {
         margin: 0;
         width: 100%;
@@ -114,22 +111,13 @@ input::-webkit-inner-spin-button {
         grid-template-columns: repeat(3, 33%);
         grid-template-rows: repeat(3, 20%);
     }
-    body {
-        background-image: none;
-        background-color: #69544c;
-    }
 
     #berechnen {
         place-self: end center;
     }
 }
 
-@media (min-width: 320px) and (max-width: 500px) { /*schmalere Smartphones*/ 
-    body {
-        background-image: none;
-        background-color: #69544c;
-    }
-
+@media (min-width: 280px) and (max-width: 500px) { /*schmalere Smartphones*/ 
     #eingaben {
         height: 90%;
         grid-template-columns: repeat(2, 50%);
@@ -148,5 +136,6 @@ input::-webkit-inner-spin-button {
         margin-top: 5%;
         margin-bottom: 10%;
         font-size: 1.5em;
+        width: 100%;
     }
 }
