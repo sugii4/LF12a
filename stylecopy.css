@@ -68,6 +68,10 @@ input::-webkit-inner-spin-button {
         font-size: 0.6em!important;
     }
 
+    .text {
+        margin-bottom: 10%;
+    }
+
     #eingaben {
         height: 50%;
         grid-template-columns: repeat(4, 24.5%); /*teilt grid in 4 spalten*/ 
