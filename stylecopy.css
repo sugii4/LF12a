@@ -87,6 +87,7 @@ input::-webkit-inner-spin-button {
         margin-top: 3%;
         grid-row-start: 3;
         grid-column-start: 4;
+        width: 50%;
     }
 }
 @media (min-width: 701px) and (max-width: 1023px){
