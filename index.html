@@ -12,11 +12,11 @@
         <p id="überschrift">Scythe Calculator</p>
             <form method="post" action="scoreboard.php" id="eingaben">
                 <div class="text">Münzen<br>
-                    <input type="number" id="muenzen" class="input" name="muenzen" placeholder="Münzen" min="0" max="500">
+                    <input type="number" id="muenzen" class="input" name="muenzen" placeholder="Münzen" min="0" max="500" required>
                     <p id="highscore_muenzen" class="highscore"></p>
                 </div>
                 <div class="text">Popularität<br>
-                    <select id="popularitaet" name="popularitaet" placeholder="Tier" class="input">
+                    <select id="popularitaet" name="popularitaet" placeholder="Tier" class="input" required>
                         <option value="blank"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -24,22 +24,22 @@
                     </select>
                 </div>
                 <div class="text">Ressourcen<br>
-                    <input type="number" id="ressourcen" class="input" name="ressourcen" placeholder="Ressourcen" min="0" max="50">
+                    <input type="number" id="ressourcen" class="input" name="ressourcen" placeholder="Ressourcen" min="0" max="50" required>
                     <p id="highscore_ressourcen" class="highscore"></p>
                 </div>
                 <div class="text">Territorien<br>
-                    <input type="number" id="territorien" class="input" name="territorien" placeholder="Territorien" min="0" max="20">
+                    <input type="number" id="territorien" class="input" name="territorien" placeholder="Territorien" min="0" max="20" required>
                     <p id="highscore_territorien" class="highscore"></p>
                 </div>
                 <div class="text">Fabrik?<br>
-                    <select id="fabrik" name="fabrik" class="input" placeholder="Fabrik?">
+                    <select id="fabrik" name="fabrik" class="input" placeholder="Fabrik?" required>
                         <option value="blank"></option>
                         <option value="true">Ja</option>
                         <option value="false">Nein</option>
                     </select>
                 </div>
                 <div class="text">Sterne<br>
-                    <select id="sterne" name="sterne" placeholder="Sterne" class="input">
+                    <select id="sterne" name="sterne" placeholder="Sterne" class="input" required>
                         <option value="blank"></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -50,7 +50,7 @@
                     </select>
                 </div>
                 <div class="text">Bonus<br>
-                    <input type="number" id="bonus" class="input" name="bonus" placeholder="Bonus" min="0" max="15">
+                    <input type="number" id="bonus" class="input" name="bonus" placeholder="Bonus" min="0" max="15" required>
                     <p id="highscore_bonus" class="highscore"></p>
                 </div>
                 <div class="text">Gesamt<br>
