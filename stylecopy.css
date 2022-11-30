@@ -74,6 +74,10 @@ input::-webkit-inner-spin-button {
         font-size: 0.6em!important;
     }
 
+    .text {
+        margin-bottom: 10%;
+    }
+
     #eingaben {
         height: 50%;
         grid-template-columns: repeat(4, 24.5%); /*teilt grid in 4 spalten*/ 
@@ -89,6 +93,7 @@ input::-webkit-inner-spin-button {
         margin-top: 3%;
         grid-row-start: 3;
         grid-column-start: 4;
+        width: 50%;
     }
 }
 @media (min-width: 701px) and (max-width: 1023px){
