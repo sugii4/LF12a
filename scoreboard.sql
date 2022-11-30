@@ -37,7 +37,9 @@ CREATE TABLE `scorelist` (
   `Sterne` int(1) NOT NULL DEFAULT 0,
   `Bonus` int(2) NOT NULL DEFAULT 0,
   `Gesamt` int(4) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) 
+
+ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indizes der exportierten Tabellen

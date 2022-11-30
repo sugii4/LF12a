@@ -18,7 +18,6 @@ let form = document.getElementById('eingaben')
 
 form.addEventListener('submit', function (event) {
     event.preventDefault(); //stoppt Weiterleitung zur scoreboard.php, führt stattdessen folgendes Script aus
-    console.log('form wurde gestoppt')
 
     let data = new FormData(form) //speichert die eingegebenen Daten der inputs
 
@@ -47,18 +46,11 @@ form.addEventListener('submit', function (event) {
         fabrik = 0
     }
 
-    console.log("gesamt Sterne:" + gesamtSterne)
-    console.log("gesamt Ressourcen:" + gesamtRessourcen)
-    console.log("gesamt Territorien:" + gesamtTerritorien)
-
     let rechnung = gesamtSterne + gesamtTerritorien + gesamtRessourcen + muenzen + bonus
-
-console.log("fabrik punkte:" + fabrik)
 
     gesamt = rechnung
     input_gesamt.value = gesamt
 
-console.log(gesamt)
 
     data.set('gesamt', gesamt)
     data.set('fabrik', fabrik) //aktualisiert die Fabrik in der FormData durch die if

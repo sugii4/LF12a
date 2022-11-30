@@ -1,9 +1,10 @@
-body {
-    background-color: #775b4f;
-    background-size: 100%;
+body, html {
     font-family: Papyrus;
     height: 100%;
-    width: 100%;
+    overflow: hidden;
+    background-image: url(wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #content { /*heller Kasten*/
@@ -11,7 +12,7 @@ body {
     background-color: rgb(252, 248, 244);
     border-radius: 15px 15px 15px 15px;
     width: clamp(10vw, 95em, 95vw);
-    /* height: 100%; */
+    height: 96%;
 }
 
 #überschrift { /*Überschrift*/
@@ -19,12 +20,7 @@ body {
     text-align: center;
     width: 100%;
     margin-bottom: 5%;
-}
-
-.highscore {
-    margin: 0;
-    width: 100%;
-    font-size: 0.6em!important;
+    margin-top: 1%;
 }
 
 .text { /*grid Kästchen */
@@ -39,12 +35,16 @@ body {
     display: grid;
     gap: 0.3em;
     justify-content: center;
-    height: 100%;
+}
+
+.highscore {
+    margin: 0;
+    width: 100%;
+    font-size: clamp(1em, 3vw, 1em)!important;
 }
 
 .input { /* input felder*/
     width: 60%;
-    font-size: 1em;
     font-family: Papyrus;
     text-align: center;
     background-color: #ccbdb6;
@@ -59,11 +59,6 @@ body {
     border-color: #64473b;
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     place-self: center;
-    font-size: clamp(1em, 3vw, 2em);
-    margin-right: 10%;
-    margin-top: 3%;
-    grid-row-start: 3;
-    grid-column-start: 4;
 }
 
 input::-webkit-outer-spin-button,
@@ -71,16 +66,87 @@ input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
 }
-@media (min-width: 320px) and (max-width: 500px) {
-    #eingaben { /*Inhalt*/
-        grid-template-columns: repeat(2, 50%); 
-        grid-template-rows: repeat(4, 24.5%); 
-        height: 100%;
+
+@media (min-width: 1024px) { /*Desktops */ 
+    .highscore {
+        margin: 0;
+        width: 100%;
+        font-size: 0.6em!important;
+    }
+
+    .text {
+        margin-bottom: 10%;
+    }
+
+    #eingaben {
+        height: 50%;
+        grid-template-columns: repeat(4, 24.5%); /*teilt grid in 4 spalten*/ 
+    }
+
+    .input {
+        font-size: 1em;
+    }
+
+    #berechnen {
+        font-size: 1.8em;
+        margin-right: 10%;
+        margin-top: 3%;
+        grid-row-start: 3;
+        grid-column-start: 4;
+        width: 50%;
     }
 }
-@media (min-width: 1280px) { /*Desktops */
+@media (min-width: 701px) and (max-width: 1023px){
     #eingaben {
         height: 100%;
-        grid-template-columns: repeat(4, 24.5%);
+        grid-template-columns: repeat(3, 30%);
+        grid-template-rows: repeat(3, 20%);
+    }
+
+    .input {
+        font-size: 1em;
+    }
+
+    #berechnen {
+        font-size: 1.8em;
+        margin-right: 10%;
+        margin-top: 3%;
+        grid-row-start: 3;
+        grid-column-start: 4;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 700px){ /*Tablets*/ 
+    #eingaben {
+        height: 93%;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: repeat(3, 20%);
+    }
+
+    #berechnen {
+        place-self: end center;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 500px) { /*schmalere Smartphones*/ 
+    #eingaben {
+        height: 90%;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .input {
+        margin-top: 1%;
+        font-size: 0.8em;
+        height: 40%;
+        width: 80%;
+    }
+
+    #berechnen {
+        grid-row-start: 5;
+        grid-column-start: 2;
+        margin-top: 5%;
+        margin-bottom: 10%;
+        font-size: 1.5em;
+        width: 100%;
     }
 }
